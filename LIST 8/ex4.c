@@ -59,7 +59,7 @@ int main(void){
 
     do{
         switch (command){
-            case 1:
+            case AUMENTAR:
                 contadorA = -1;
                 do{
                     if (contadorA != -1)
@@ -81,7 +81,7 @@ int main(void){
                 printf("\n\nVALOR DO PRODUTO '%s' ALTERADO DE %.2lf PARA %.2lf REAIS", produtos[contadorA].nome, auxPreco, produtos[contadorA].preco);
 
                 break;
-            case 2:
+            case SUBTRAIR:
                 contadorA = -1;
                 do{
                     if (contadorA != -1)
@@ -100,7 +100,7 @@ int main(void){
                 printf("\n\nESTOQUE DO PRODUTO '%s' ALTERADO DE %d PARA %d", produtos[contadorA].nome, produtos[contadorA].qtdEstoque+1, produtos[contadorA].qtdEstoque);
 
                 break;
-            case 3:
+            case IMPRIMIR:
                 printf("\n\n\n\tPRODUTOS COM VALORES ACIMA DA MEDIA (%.2lf reais)\n\n", media);
                 for (contadorA = 0; contadorA < PRODUTOS; contadorA++){
                     if (produtos[contadorA].preco > media){
