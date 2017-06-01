@@ -69,6 +69,9 @@ int main(void){
                 mostrar_clientes(clientes, qtdClientes);
                 break;
             case PESQCOD:
+                printf("\n\n--------------------");
+                printf("BUSCA DE CLIENTE POR CODIGO:");
+                printf("--------------------\n\n");
                 posAux = pesq_cod_cliente(clientes, qtdClientes);
                 if (posAux != -1){
                     printf("\n\nCLIENTE ENCONTRADO!\n\n");
@@ -182,9 +185,6 @@ int pesq_cod_cliente(clientes_t* clientes, int qtdClientes){
     int contadorA;
     int codAux;
 
-    printf("\n\n--------------------");
-    printf("BUSCA DE CLIENTE POR CODIGO:");
-    printf("--------------------\n\n");
     printf("Digite o codigo para pesquisa: ");
     scanf("%d", &codAux);
     for (contadorA = 0; contadorA < qtdClientes; contadorA++){
